@@ -15,12 +15,12 @@ public class WalletController {
 
 	private final WalletService service;
 
-	@PostMapping
+	@PostMapping("/create")
 	public ResponseEntity<WalletAccount> create(@RequestBody WalletAccount account) {
 		return service.createWallet(account);
 	}
 
-	@GetMapping
+	@GetMapping("get-all")
 	public ResponseEntity<List<WalletAccount>> getAll() {
 		return service.getAllWallet();
 	}
